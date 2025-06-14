@@ -7,18 +7,22 @@
  */
 export function renderLogin() {
     return `
-        <div id="login_container">
-        <img src="${window.location.origin}/assets/logo/logo.png" alt="Logo" id="logo">
-        <form id="login_form">
-        <h1 id="login_header">Login Here</h1>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Login</button>
-        </form>
+    <div id="login_container">
+        <div id="login_shapes_container">
+            <div class="shape"></div>
+            <div class="shape"></div>
         </div>
+            <form id="login_form">
+                <img src="${window.location.origin}/assets/logo/logo.png" alt="Logo" id="login_form_logo">
+    
+                <label for="username" id="login_labels">Username</label>
+                <input type="text" placeholder="Email or Phone" id="username">
+    
+                <label for="password" id="login_labels">Password</label>
+                <input type="password" placeholder="Password" id="password">
+    
+                <button id="login_button">Log In</button>
+            </form>
+    </div>
     `;
 }
