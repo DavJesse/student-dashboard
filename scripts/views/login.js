@@ -8,9 +8,9 @@
 export function renderLogin() {
     return `
         <div id="login_container">
-        <img src="${window.location.origin}/assets/images/logo.png" alt="Logo" id="logo">
-        <h1 id="login_header">Login Here</h1>
+        <img src="${window.location.origin}/assets/logo/logo.png" alt="Logo" id="logo">
         <form id="login_form">
+        <h1 id="login_header">Login Here</h1>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             
