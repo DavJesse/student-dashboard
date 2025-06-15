@@ -1,0 +1,203 @@
+/*
+    This CSS file provides styling for the login form and its associated elements.
+    It includes styles for the container, shapes, form, labels, inputs, and social media links.
+    The file also includes media queries for responsiveness on smaller screens.
+*/
+
+/* Main container for the login form */
+#login_container {
+    width: fit-content; /* Adjust width to content size */
+    height: fit-content; /* Adjust height to content size */
+}
+
+/* Container for the background shapes */
+#login_shapes_container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%); /* Center the container */
+    left: 50%;
+    top: 50%;
+}
+
+/* Styles for the individual shapes */
+#login_shapes_container .shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%; /* Make the shapes circular */
+}
+
+/* Style for the first shape */
+.shape:first-child {
+    background: linear-gradient(#049730, #23f669); /* Green gradient */
+    left: 32%;
+    top: 10%;
+}
+
+/* Style for the last shape */
+.shape:last-child {
+    background: linear-gradient(to right, #ffd92f, #f09819); /* Yellow to orange gradient */
+    right: 32%;
+    bottom: 10%;
+}
+
+/* Main login form styling */
+#login_form {
+    height: fit-content; /* Adjust height to content size */
+    width: 19%; /* Set width of the form */
+    background-color: rgba(255, 255, 255, 0.13); /* Semi-transparent white background */
+    position: absolute;
+    transform: translate(-50%, -50%); /* Center the form */
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Apply a blur to the background */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Light white border */
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6); /* Dark shadow */
+    padding: 50px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* General styles for form elements */
+form * {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+/* Logo styling */
+#login_form_logo {
+    height: 150px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain; /* Ensure the logo fits within its container */
+}
+
+/* Heading styling */
+#login_form h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: center;
+}
+
+/* Label styling */
+#login_labels {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Input field styling */
+input {
+    display: block;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.07); /* Semi-transparent white background */
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Placeholder text styling */
+::placeholder {
+    color: #e5e5e5;
+}
+
+/* Button styling */
+#login_button {
+    margin-top: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Social media links container */
+.social {
+    margin-top: 30px;
+    display: flex;
+}
+
+/* Social media link styling */
+.social div {
+    background: red;
+    width: 150px;
+    border-radius: 3px;
+    padding: 5px 10px 10px 5px;
+    background-color: rgba(255, 255, 255, 0.27); /* Semi-transparent white background */
+    color: #eaf0fb;
+    text-align: center;
+}
+
+/* Hover effect for social media links */
+.social div:hover {
+    background-color: rgba(255, 255, 255, 0.47); /* Slightly more opaque on hover */
+}
+
+/* Spacing for the Facebook link */
+.social .fb {
+    margin-left: 25px;
+}
+
+/* Icon styling */
+.social i {
+    margin-right: 4px;
+}
+
+/* Media query for screens smaller than 640px */
+@media (max-width: 640px) {
+    #login_form {
+        width: 60%; /* Increase form width on smaller screens */
+    }
+    #login_shapes_container .shape {
+        height: 100px;
+        width: 100px;
+    }
+    #login_shapes_container .shape:first-child {
+        left: -3%;
+        top: 6%;
+    }
+    #login_shapes_container .shape:last-child {
+        right: -3%;
+        bottom: 6%;
+    }
+    #login_form h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+/* Media query for screens smaller than 1280px */
+@media (max-width: 1280px) {
+    #login_form {
+        width: 30%; /* Adjust form width on medium-sized screens */
+    }
+    #login_shapes_container .shape {
+        height: 150px;
+        width: 150px;
+    }
+    #login_shapes_container .shape:first-child {
+        left: 25%;
+        top: 25%;
+    }
+    #login_shapes_container .shape:last-child {
+        right: 25%;
+        bottom: 25%;
+    }
+    #login_form h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
